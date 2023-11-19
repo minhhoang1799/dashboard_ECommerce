@@ -1,0 +1,398 @@
+@import url(../../../assets/css/reset.css);
+@import url(./widget.css);
+@import url(../../../assets/css/modal.css);
+@import url(../../../assets/css/loading.css);
+
+:root {
+ --main1: #fff;
+ --main2: #F4F7F9;
+ --main3: #2A3650;
+ --text1: #3d434a;
+}
+
+#admin {
+ max-width: 100%;
+ overflow: hidden;
+}
+
+.admin__wrapper {
+ display: flex;
+ align-items: flex-start;
+ align-items: center;
+}
+
+
+.admin__content {
+ width: 1000%;
+ height: 100vh;
+ padding: 0 0 0 20%;
+ background-color: var(--main2);
+}
+
+header {
+ position: fixed;
+ top: 0;
+ left: 20%;
+ z-index: 99;
+ width: 80%;
+ height: 100px;
+ padding: 20px 40px;
+ box-shadow: 0px 4px 40px rgba(39, 32, 120, 0.1);
+ background-color: var(--main1);
+}
+
+.header__wrapper {
+ display: flex;
+ justify-content: space-between;
+}
+
+.header__left {}
+
+.header__name {
+ color: var(--text1);
+ font-size: 28px;
+ font-style: 700;
+ margin-bottom: .5rem;
+}
+
+.header__breadcrumb {
+ display: flex;
+ align-items: center;
+}
+
+.header__breadcrumb li {
+ font-size: 14px;
+ color: var(--text1);
+}
+
+.header__breadcrumb li i {
+ pointer-events: none;
+ color: var(--text1);
+}
+
+.header__breadcrumb li:not(:last-child) {
+ margin-right: 2rem;
+ position: relative;
+}
+
+.header__breadcrumb li:not(:last-child)::after {
+ content: '/';
+ position: relative;
+ top: 0;
+ right: -1rem;
+}
+
+.header__breadcrumb li:last-child {
+ color: #7a70ba;
+ font-weight: 500;
+}
+
+.header__right {
+ display: flex;
+ align-items: center;
+}
+
+.header__user {
+ display: flex;
+ align-items: center;
+
+}
+
+.header__user .user__image {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 35px;
+ height: 35px;
+ border-radius: 50%;
+ overflow: hidden;
+ border: 1px solid var(--text1);
+ padding: 5px;
+ margin-right: 10px;
+}
+
+.header__user .user__image img {
+ width: 100%;
+ height: auto;
+}
+
+.header__list {
+ margin-right: 3rem;
+ display: flex;
+ align-items: center;
+}
+
+.header__list li {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 35px;
+ height: 35px;
+ border-radius: 50%;
+ background-color: var(--main2);
+ cursor: pointer;
+ color: var(--text1);
+ font-size: 16px;
+}
+
+
+
+.header__profile {}
+
+.header__profile--name {
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--text1);
+ margin-bottom: .5rem;
+}
+
+.header__profile--mandates #logout {
+ cursor: pointer;
+ font-size: 14px;
+ color: var(--text1);
+}
+
+.header__profile--mandates #logout i {
+ margin-right: 5px;
+}
+
+main {
+ padding: 140px 20px 40px;
+}
+
+section {
+ padding: 0 0 40px;
+}
+
+.section__wrapper {
+ background-color: var(--main1);
+ border-radius: 10px;
+ padding: 15px 0;
+ box-shadow: 0px 4px 40px rgba(39, 32, 120, 0.1);
+}
+
+.section__title {
+ color: var(--text1);
+ font-weight: 700;
+ font-size: 28px;
+ padding: 0 20px 15px;
+ border-bottom: 1px dashed var(--text1);
+ margin-bottom: 15px;
+}
+
+.section__profile {
+ padding: 0 20px;
+}
+
+.section__profile--name {
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+.section__profile--avatar {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 1px solid var(--text1);
+ width: 60px;
+ height: 60px;
+ border-radius: 50%;
+ overflow: hidden;
+ margin-right: 20px;
+}
+
+.section__profile--avatar img {
+ width: 100%;
+ height: auto;
+}
+
+.section__profile--name h3 {
+ display: flex;
+ flex-direction: column;
+ font-size: 18px;
+ font-weight: 700;
+ color: var(--text1);
+ text-transform: uppercase;
+}
+
+.section__profile--position {
+ font-size: 14px;
+ font-weight: 500;
+ text-transform: lowercase;
+}
+
+.section__profile--location {
+ margin-bottom: 20px;
+}
+
+.section__profile--email {
+ margin-bottom: 20px;
+}
+
+.section__profile--location li,
+.section__profile--email {
+ font-size: 14px;
+ font-weight: 500;
+ color: var(--text1);
+}
+
+.section__profile--location li i,
+.section__profile--email i {
+ margin-right: 10px;
+}
+
+.section__profile li:not(:last-child) {
+ margin-bottom: 1.5rem;
+}
+
+.section__profile--btn button {
+ width: 120px;
+ height: 30px;
+}
+
+.section__profile--btn button:not(:last-child) {
+ margin-right: 15px;
+}
+
+footer p {
+ font-size: 14px;
+ font-weight: 700;
+ text-align: center;
+ color: var(--text1);
+}
+
+
+
+
+
+
+
+#admin table.no-border,
+#admin table.no-border th,
+#admin table.no-border td {
+ border: 1px dashed transparent;
+}
+
+#admin table.no-border {
+ width: 100%;
+}
+
+#admin table.no-border th,
+#admin table.no-border td {
+ position: relative;
+ padding: 10px;
+ font-size: 12px;
+ border-bottom-color: var(--text1);
+ color: var(--text1);
+}
+
+#admin table.no-border th {
+ font-weight: 700;
+ border-bottom-color: var(--text1);
+}
+
+#admin table.no-border td button {
+ margin-bottom: 1px;
+}
+
+#admin table.no-border td button:not(:last-child) {
+ margin-right: 5px;
+}
+
+#admin table.no-border .table-center p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ padding: 5px 0;
+}
+
+#admin table.no-border img {
+ width: 50px;
+ height: 50px;
+ object-fit: cover;
+}
+
+#admin table.no-border .table-center {
+ text-align: center;
+}
+
+#admin table.no-border .table-center span {
+ color: var(--text1);
+ font-size: 16px;
+ font-weight: 700;
+ padding: 15px 0;
+ display: inline-block;
+}
+
+#admin table.no-border .admin-block {
+ width: 40px;
+ height: 40px;
+ background-color: var(--main3);
+ border: none;
+ border-radius: 3px;
+ color: var(--main1);
+ font-size: 16px;
+}
+
+#user-management .delete-notification {
+ padding: 15px 20px;
+}
+
+#user-management .delete-notification p {
+ font-size: 16px;
+ margin-bottom: 20px;
+}
+
+#user-management .delete-notification .delete-list,
+#user-management .block-notification .block-list,
+#user-management .block-notification .unBlock-list {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+#user-management .delete-notification .delete-list button,
+#user-management .block-notification .block-list button,
+#user-management .block-notification .unBlock-list button {
+ width: 150px;
+}
+
+#user-management .delete-notification .delete-list button:not(:last-child),
+#user-management .block-notification .block-list button:not(:last-child),
+#user-management .block-notification .unBlock-list button:not(:last-child) {
+ margin-right: 2rem;
+}
+
+.block-notification {
+ padding: 15px;
+}
+
+.block-notification p {
+ font-size: 16px;
+ margin-bottom: 20px;
+}
+
+.block-notification #form-block {
+ padding: 0;
+}
+
+.block-notification #form-block label {
+ margin-bottom: 15px;
+ font-size: 14px;
+}
+
+.block-notification #form-block textarea {
+ height: 80px;
+}
+
+.block-notification #form-block .block-list {
+ margin-top: 20px;
+}
+
+.block-notification .note {
+ color: red;
+ font-weight: 500;
+}

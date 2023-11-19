@@ -1,0 +1,125 @@
+.admin__widget {
+ position: fixed;
+ top: 0;
+ left: 0;
+ z-index: 99;
+ width: 20%;
+ height: 100vh;
+ padding: 15px;
+ background-color: #2A3650;
+}
+
+.admin__widget--top {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.admin__logo {
+ width: 100px;
+}
+
+.admin__logo img {
+ width: 100%;
+ height: auto;
+}
+
+.admin__handle {
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ border: 1px solid #fff;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.admin__handle i {
+ font-size: 16px;
+ color: #fff;
+ transform: rotate(90deg);
+ transition: all ease-in-out .5s;
+}
+
+
+.admin__widget--bottom {
+ padding: 30px 0;
+}
+
+.admin__item:not(:last-child) {
+ margin-bottom: 40px;
+}
+
+.admin__title {
+ color: #fff;
+ font-size: 20px;
+ color: #fff;
+ text-transform: uppercase;
+ padding: 5px 15px;
+ background-color: rgb(255 255 255 / 10%);
+ border-radius: 5px;
+ width: max-content;
+ margin-bottom: 30px;
+}
+
+.admin__nav>li {
+ cursor: pointer;
+ position: relative;
+}
+
+.admin__nav>li>.is-name {
+ color: #fff;
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 2rem;
+}
+
+.admin__nav>li .is-name i {
+ margin-right: 15px;
+}
+
+.admin__nav>li:not(:last-child) {
+ margin-bottom: 1.5rem;
+}
+
+.admin__nav>li>.is-icon {
+ position: absolute;
+ top: 0;
+ right: 15px;
+ z-index: 2;
+ color: #fff;
+ font-size: 16px;
+ transition: all ease-in-out .5s;
+}
+
+.admin__nav .is-nav {
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.5s ease-in-out;
+ padding-left: 30px;
+}
+
+
+.admin__nav .is-nav li a {
+ color: rgb(255 255 255 / 10%);
+ font-size: 16px;
+ text-decoration: none;
+ transition: all ease-in-out .3s;
+}
+
+.admin__nav .is-nav li a:hover {
+ color: #fff;
+}
+
+.admin__nav .is-nav>li:not(:last-child) {
+ margin-bottom: 1.5rem;
+}
+
+/* when click li */
+.admin__nav>li.active .is-nav {
+ max-height: 1000px;
+}
+
+.admin__nav>li.active>.is-icon {
+ transform: rotate(-180deg);
+}
