@@ -157,9 +157,25 @@ const handleBlockUser = (id) => {
         const btnDelete = document.querySelector('.block-notification .block-yes');
         const btnCancel = document.querySelector('.block-notification .block-cancel');
         btnDelete.addEventListener('click', function() {
-          const message = document.querySelector('#user-message').value;
+          const isMessage = document.querySelector('#user-message').value;
           getList[i].access.status ? getList[i].access.status = false : getList[i].access.status = true;
-          getList[i].access.message = message;
+          getList[i].access.message = isMessage;
+          const createUserBlackList = {
+            id: getList[i].id,
+            email: getList[i].email,
+            access: {
+              status:  false,
+              message: isMessage
+            }
+          }
+          const getBackList = JSON.parse(localStorage.getItem('black-list'));
+          if(!getBackList || getBackList.length === 0) {
+            localStorage.setItem('black-list', JSON.stringify([createUserBlackList]));
+            localStorage.setItem('userList', JSON.stringify(getList));
+            return window.location.reload()
+          }
+          getBackList.push(createUserBlackList);
+          localStorage.setItem('black-list', JSON.stringify(getBackList));
           localStorage.setItem('userList', JSON.stringify(getList));
           return window.location.reload()
         });
@@ -180,8 +196,15 @@ const handleBlockUser = (id) => {
       btnDelete.addEventListener('click', function() {
         getList[i].access.status ? getList[i].access.status = false : getList[i].access.status = true;
         getList[i].access.message = '';
-        localStorage.setItem('userList', JSON.stringify(getList));
-        return window.location.reload()
+        const getBlackList = JSON.parse(localStorage.getItem('black-list'));
+        for(let j = 0; j < getBlackList.length; j++) {
+          if(getList[i].id === getBlackList[j].id) {
+            getBlackList.splice((i-1),i);
+            localStorage.setItem('black-list', JSON.stringify(getBlackList));
+            localStorage.setItem('userList', JSON.stringify(getList));
+            return window.location.reload()
+          }
+        }
       });
       btnCancel.addEventListener('click', function(){
         return document.querySelector('#block-user').classList.remove('active');

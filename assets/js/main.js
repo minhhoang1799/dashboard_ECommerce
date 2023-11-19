@@ -1,16 +1,17 @@
 // check user
 const checkUser = () => {
   const user = JSON.parse(localStorage.getItem('userID'));
-  const getListUser = JSON.parse(localStorage.getItem('userList'));
-  if (user) {
-    for (let i = 0; i < getListUser.length; i++) {
-      if (user?.id === getListUser[i].id) {
-        if (!getListUser[i].access.status) {
+  const getBlackList = JSON.parse(localStorage.getItem('black-list'));
+  if(getBlackList || getBlackList.length < 0) {
+     if (user) {
+      for (let i = 0; i < getBlackList.length; i++) {
+        if (user?.id === getBlackList[i].id) {
           localStorage.removeItem('userID');
           return window.location.href = './'
         }
       }
     }
+    return user;
   }
   return user;
 }

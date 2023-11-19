@@ -197,3 +197,7 @@ header {
 .header__user--dropdown li i {
  margin-right: 5px;
 }
+
+main {
+ padding-top: 200px;
+}

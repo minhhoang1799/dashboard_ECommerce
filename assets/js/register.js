@@ -46,10 +46,6 @@ const handleSubmitForm = (event) => {
     token2: new Date().getDay()
   },
   {
-    token1: userEmail,
-    token2: userName
-  },
-  {
     token1: userPassWord,
     token2: userPassWord
   }
@@ -59,8 +55,7 @@ const handleSubmitForm = (event) => {
    id: `${hashedPassword[0]}`,
    name: userName,
    email: userEmail,
-   password: `${hashedPassword[2]}`,
-   token: hashedPassword[1],
+   password: `${hashedPassword[1]}`,
    position: 'User',
    cart: [],
    profile: {
