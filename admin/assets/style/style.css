@@ -272,6 +272,7 @@ footer p {
 #admin table.no-border th,
 #admin table.no-border td {
  border: 1px dashed transparent;
+ vertical-align: middle;
 }
 
 #admin table.no-border {
@@ -395,4 +396,18 @@ footer p {
 .block-notification .note {
  color: red;
  font-weight: 500;
+}
+
+#product-management {
+ position: relative;
+}
+
+#add_product {
+ position: absolute;
+ top: 15px;
+ right: 15px;
+}
+
+#add_product i {
+ margin-right: 5px;
 }

@@ -79,7 +79,7 @@
     </div>
     <!-- <button id="dark">click</button> -->
    </header>
-   <main>
+   <main id="product">
     <section id="product-management">
      <div class="section__wrapper">
       <div class="product__top">
@@ -87,13 +87,47 @@
       </div>
       <div class="section__management">
        <div class="product-management">
-        <div class="product__top">
+        <!-- <div class="product__top">
          <div class="product__btn--list">
           <div class="product__btn--filter">filter</div>
           <div class="product__btn--add">add</div>
          </div>
+        </div> -->
+        <div class="product__bottom">
+         <div class="product__bottom--list">
+          <table class="no-border">
+           <thead>
+            <tr>
+             <th>ID</th>
+             <th>Name</th>
+             <th>Image</th>
+             <th>Category</th>
+             <th>Price</th>
+             <th>Price discout</th>
+             <th>Quantity</th>
+             <Th>Status</Th>
+             <th>Action</th>
+            </tr>
+           </thead>
+           <tbody></tbody>
+          </table>
+         </div>
         </div>
        </div>
+      </div>
+     </div>
+     <button type="button" id="add_product" data-target="add-product" onclick="addProduct()" class="btn btn-success"><i
+       class="fa-solid fa-plus"></i>Thêm sản
+      phẩm</button>
+    </section>
+    <section class="page-modal">
+     <div class="main__modal" id="add-product">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Thêm mới sản phẩm</h3>
+       <div class="main__modal--des">
+        <div class="product-add"></div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
       </div>
      </div>
     </section>
@@ -114,8 +148,10 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
  <script type="module" src="../assets/js/admin/main.js"></script>
+ <script src="./assets/js/product/product.js"></script>
  <script src="./assets/js/adminColor.js"></script>
  <script src="./assets/js/handleActiveNav.js"></script>
+ <script type="module" src="../assets/js/modal.js"></script>
  <script src="../assets/js/loading.js"></script>
 </body>
 

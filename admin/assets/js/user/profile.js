@@ -1,5 +1,5 @@
-import changePassword from "../../../assets/js/changePassword.js";
-import hashPassword from "../../../assets/js/createToken.js";
+import changePassword from "../../../../assets/js/changePassword.js";
+import hashPassword from "../../../../assets/js/createToken.js";
 
 
 
