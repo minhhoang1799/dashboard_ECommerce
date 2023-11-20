@@ -35,6 +35,8 @@
  background-color: #fff;
  min-width: 600px;
  min-height: 300px;
+ max-height: 600px;
+ overflow: auto;
  border-radius: 15px;
  padding: 20px 0;
 }

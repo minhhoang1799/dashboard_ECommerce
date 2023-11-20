@@ -17,7 +17,7 @@
   crossorigin="anonymous" referrerpolicy="no-referrer" />
  <link rel="stylesheet" href="./assets/style/style.css">
 
- <title>Admin | User profile</title>
+ <title>Admin | Product Category</title>
 </head>
 
 <body id="admin">
@@ -60,10 +60,10 @@
    <header>
     <div class="header__wrapper">
      <div class="header__left">
-      <h2 class="header__name">User profile</h2>
+      <h2 class="header__name">Dashboard</h2>
       <ul class="header__breadcrumb">
        <li><a href="./"><i class="fa-solid fa-house"></i></a></li>
-       <li>User profile</li>
+       <li>Product Category</li>
       </ul>
      </div>
      <div class="header__right">
@@ -80,24 +80,96 @@
     </div>
     <!-- <button id="dark">click</button> -->
    </header>
-   <main>
-    <section id="user-profile">
+   <main id="category">
+    <section id="category_management">
      <div class="section__wrapper">
-      <h3 class="section__title">My profile</h3>
-      <div class="section__profile"></div>
-      <div class="main__modal" id="edit-admin">
-       <div class="main__modal--content">
-        <h3 class="main__modal--title">Chỉnh sửa thông tin</h3>
-        <form id="form-edit"></form>
-        <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      <div class="product__top">
+       <h3 class="section__title">Category management</h3>
+      </div>
+      <div class="section__management">
+       <div class="category__wrapper">
+        <div class="category__wrapper--list">
+         <table class="no-border">
+          <thead>
+           <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Subcategories</th>
+            <th class="table-center">Action Category</th>
+           </tr>
+          </thead>
+          <tbody></tbody>
+         </table>
+        </div>
        </div>
       </div>
-      <div class="main__modal" id="change-password">
-       <div class="main__modal--content">
-        <h3 class="main__modal--title">Đổi mật khẩu</h3>
-        <form id="form-changePassword"></form>
-        <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+     </div>
+     <button type="button" id="add_category" data-target="form-category" onclick="" class="btn btn-success"><i
+       class="fa-solid fa-plus"></i>Thêm danh mục</button>
+    </section>
+    <section class="page-modal">
+     <div class="main__modal" id="form-category">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Thêm mới danh mục</h3>
+       <div class="main__modal--des">
+        <div class="category-add">
+         <form></form>
+        </div>
        </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+     </div>
+     <div class="main__modal" id="edit-cate">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Chỉnh sửa danh mục</h3>
+       <div class="main__modal--des">
+        <div class="edit-sub">
+         <form></form>
+        </div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+     </div>
+     <div class="main__modal" id="delete-cate">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Xóa danh mục </h3>
+       <div class="main__modal--des">
+        <div class="delete-sub">
+        </div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+     </div>
+     <div class="main__modal" id="add-subcate">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Thêm danh mục phụ</h3>
+       <div class="main__modal--des">
+        <div class="add-sub">
+         <form></form>
+        </div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+     </div>
+     <div class="main__modal" id="edit-subcate">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Chỉnh sửa danh mục phụ</h3>
+       <div class="main__modal--des">
+        <div class="edit-sub">
+         <form></form>
+        </div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+      </div>
+     </div>
+     <div class="main__modal" id="delete-subcate">
+      <div class="main__modal--content mh-auto">
+       <h3 class="main__modal--title">Xóa danh mục phụ</h3>
+       <div class="main__modal--des">
+        <div class="delete-sub">
+        </div>
+       </div>
+       <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
       </div>
      </div>
     </section>
@@ -118,9 +190,9 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
  <script type="module" src="../assets/js/admin/main.js"></script>
+ <script type="module" src="./assets/js/product/category.js"></script>
  <script src="./assets/js/adminColor.js"></script>
  <script src="./assets/js/handleActiveNav.js"></script>
- <script type="module" src="./assets/js/user/profile.js"></script>
  <script type="module" src="../assets/js/modal.js"></script>
  <script src="../assets/js/loading.js"></script>
 </body>

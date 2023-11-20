@@ -338,7 +338,48 @@ footer p {
  font-size: 16px;
 }
 
-#user-management .delete-notification {
+
+#admin table ul li {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+#admin table ul li:not(:last-child) {
+ margin-bottom: 10px;
+ position: relative;
+}
+
+#admin table ul li .btn__sub--list {
+ display: flex;
+ align-items: center;
+}
+
+#admin table ul li .btn__sub--list .btn__sub {
+ width: 20px;
+ height: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #e1e1e1;
+ border-radius: 5px;
+ cursor: pointer;
+}
+
+#admin table ul li .btn__sub--list .btn__sub:hover {
+ opacity: .7;
+}
+
+#admin table ul li .btn__sub--list .btn__sub:not(:last-child) {
+ margin-right: 5px;
+}
+
+#admin table ul li .btn__sub--list .btn__sub i {
+ font-size: 14pxs;
+}
+
+
+*/ #user-management .delete-notification {
  padding: 15px 20px;
 }
 
@@ -349,21 +390,28 @@ footer p {
 
 #user-management .delete-notification .delete-list,
 #user-management .block-notification .block-list,
-#user-management .block-notification .unBlock-list {
+#user-management .block-notification .unBlock-list,
+#category .delete-subcate {
  display: flex;
  align-items: center;
  justify-content: center;
 }
 
+#category .delete-subcate {
+ margin-top: 20px;
+}
+
 #user-management .delete-notification .delete-list button,
 #user-management .block-notification .block-list button,
-#user-management .block-notification .unBlock-list button {
- width: 150px;
+#user-management .block-notification .unBlock-list button,
+#category .delete-subcate button {
+ width: 100px;
 }
 
 #user-management .delete-notification .delete-list button:not(:last-child),
 #user-management .block-notification .block-list button:not(:last-child),
-#user-management .block-notification .unBlock-list button:not(:last-child) {
+#user-management .block-notification .unBlock-list button:not(:last-child),
+#category .delete-subcate button:not(:last-child) {
  margin-right: 2rem;
 }
 
@@ -398,16 +446,62 @@ footer p {
  font-weight: 500;
 }
 
+#category_management,
 #product-management {
  position: relative;
 }
 
+#category_management #add_category,
 #add_product {
  position: absolute;
  top: 15px;
  right: 15px;
 }
 
+#add_category i,
 #add_product i {
  margin-right: 5px;
+}
+
+#add-field {
+ height: 30px !important;
+ color: #fff;
+}
+
+.form-wrapper.cate {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 15px;
+}
+
+.form-subcate {
+ padding: 15px 20px;
+ border: 1px dashed #000;
+ border-radius: 10px;
+}
+
+.form-subcate p {
+ font-size: 14px;
+ text-align: center;
+}
+
+.delete-sub p {
+ font-size: 14px;
+ text-align: center;
+ padding: 15px 15px 0;
+}
+
+.note {
+ color: red;
+ font-weight: 700;
+ font-size: 14px;
+}
+
+.note:not(:last-child) {
+ margin-right: 5px;
+}
+
+.note:not(:last-child)::after {
+ content: ',';
 }
