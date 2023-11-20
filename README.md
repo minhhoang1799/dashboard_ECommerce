@@ -4,7 +4,7 @@
 
 tạo biến userList để tạo Database Localstorage;
 
-**Note: chỉ có admin để đăng nhập vào admin "./admin/"**
+**Note:  Để đăng nhập vào admin "./admin/" cần có user list default**
 
 
 
