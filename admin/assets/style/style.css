@@ -25,6 +25,7 @@
 .admin__content {
  width: 1000%;
  height: 100vh;
+ overflow: auto;
  padding: 0 0 0 20%;
  background-color: var(--main2);
 }
@@ -65,9 +66,17 @@ header {
  color: var(--text1);
 }
 
+.header__breadcrumb li a,
 .header__breadcrumb li i {
- pointer-events: none;
+ /* pointer-events: none; */
  color: var(--text1);
+ text-decoration: none;
+}
+
+.header__breadcrumb li a {
+ font-size: 14px;
+ font-weight: 500;
+
 }
 
 .header__breadcrumb li:not(:last-child) {
@@ -286,6 +295,7 @@ footer p {
  font-size: 12px;
  border-bottom-color: var(--text1);
  color: var(--text1);
+ max-width: 400px;
 }
 
 #admin table.no-border th {
@@ -375,9 +385,25 @@ footer p {
 }
 
 #admin table ul li .btn__sub--list .btn__sub i {
- font-size: 14pxs;
+ color: #2A3650;
 }
 
+#admin table tbody a {
+ width: 20px;
+ height: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #e1e1e1;
+ border-radius: 5px;
+ cursor: pointer;
+ text-decoration: none;
+ margin: 0 auto;
+}
+
+#admin table tbody a i {
+ color: #2A3650;
+}
 
 */ #user-management .delete-notification {
  padding: 15px 20px;
@@ -388,6 +414,7 @@ footer p {
  margin-bottom: 20px;
 }
 
+#product .product-wrap .delete-product,
 #user-management .delete-notification .delete-list,
 #user-management .block-notification .block-list,
 #user-management .block-notification .unBlock-list,
@@ -401,6 +428,7 @@ footer p {
  margin-top: 20px;
 }
 
+#product .product-wrap .delete-product button,
 #user-management .delete-notification .delete-list button,
 #user-management .block-notification .block-list button,
 #user-management .block-notification .unBlock-list button,
@@ -408,6 +436,7 @@ footer p {
  width: 100px;
 }
 
+#product .product-wrap .delete-product button:not(:last-child),
 #user-management .delete-notification .delete-list button:not(:last-child),
 #user-management .block-notification .block-list button:not(:last-child),
 #user-management .block-notification .unBlock-list button:not(:last-child),
@@ -504,4 +533,32 @@ footer p {
 
 .note:not(:last-child)::after {
  content: ',';
+}
+
+
+#product select {
+ font-size: 14px;
+}
+
+#product .product-wrap p {
+ padding: 15px;
+ font-size: 14px;
+}
+
+#product .is-editor,
+#product .is-detail {
+ padding: 15px 30px;
+}
+
+#product-editor--wrapper {
+ margin-bottom: 30px;
+}
+
+#product-editor .product-editor_btn {
+ display: flex;
+ justify-content: center;
+}
+
+.rte-fixed.rte-floatpanel-paragraphop {
+ display: none !important;
 }

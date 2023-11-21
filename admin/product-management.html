@@ -104,9 +104,10 @@
                           <th>Image</th>
                           <th>Category</th>
                           <th>Price</th>
-                          <th>Price discout</th>
+                          <th>Price discount</th>
                           <th>Quantity</th>
                           <Th>Status</Th>
+                          <Th class="table-center">Detail</Th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -117,8 +118,8 @@
               </div>
             </div>
           </div>
-          <button type="button" id="add_product" data-target="form-product" onclick="addProduct()"
-            class="btn btn-success"><i class="fa-solid fa-plus"></i>Thêm sản
+          <button type="button" id="add_product" data-target="form-product" class="btn btn-success"><i
+              class="fa-solid fa-plus"></i>Thêm sản
             phẩm</button>
         </section>
         <section class="page-modal">
@@ -127,6 +128,24 @@
               <h3 class="main__modal--title">Thêm mới sản phẩm</h3>
               <div class="main__modal--des">
                 <div class="product-add"></div>
+              </div>
+              <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+          </div>
+          <div class="main__modal" id="product-edit">
+            <div class="main__modal--content mh-auto">
+              <h3 class="main__modal--title">Chỉnh sửa thông tin sản phẩm</h3>
+              <div class="main__modal--des">
+                <div class="product-wrap"></div>
+              </div>
+              <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
+            </div>
+          </div>
+          <div class="main__modal" id="product-delete">
+            <div class="main__modal--content mh-auto">
+              <h3 class="main__modal--title">Xóa sản phẩm</h3>
+              <div class="main__modal--des">
+                <div class="product-wrap"></div>
               </div>
               <div class="btn__close"><i class="fa-solid fa-xmark"></i></div>
             </div>
@@ -150,7 +169,7 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
   <script type="module" src="../assets/js/admin/main.js"></script>
-  <script src="./assets/js/product/product.js"></script>
+  <script type="module" src="./assets/js/product/product.js"></script>
   <script src="./assets/js/adminColor.js"></script>
   <script src="./assets/js/handleActiveNav.js"></script>
   <script type="module" src="../assets/js/modal.js"></script>
