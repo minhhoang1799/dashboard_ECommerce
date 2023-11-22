@@ -49,10 +49,6 @@
  font-weight: 700;
 }
 
-body {
- height: 10000px;
-}
-
 header {
  position: fixed;
  top: 0;
@@ -207,12 +203,40 @@ section {
  padding: 30px 0;
 }
 
+.section-breadcrumb ul {
+ display: flex;
+ align-items: center;
+}
+
+.section-breadcrumb ul li a,
+.section-breadcrumb ul li span {
+ font-size: 16px;
+ color: var(--main2);
+}
+
+.section-breadcrumb ul li a {
+ text-decoration: none;
+}
+
+.section-breadcrumb ul li:not(:last-child) {
+ margin-right: 20px;
+ position: relative;
+}
+
+.section-breadcrumb ul li:not(:last-child)::after {
+ content: '/';
+ color: var(--main1);
+ font-size: 16px;
+ position: absolute;
+ top: 1px;
+ right: -13px;
+}
+
 .main__title {
  font-size: 32px;
  font-weight: 700;
  color: var(--main2);
  margin-bottom: 30px;
- text-align: center;
 }
 
 .product-banner {
@@ -236,6 +260,182 @@ section {
 }
 
 .product-list__wrapper {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin: 0 -15px -20px;
+ position: relative;
+}
+
+.product-list__wrapper::after {
+ content: '';
+ flex: 1;
+}
+
+.product-list__col {
+ flex: 0 0 33.33%;
+ max-width: 33.33%;
+ margin-bottom: 30px;
+ padding: 0 10px;
+}
+
+.product-list__item {
+ width: 100%;
+ border: 1px dashed var(--main1);
+ border-radius: 5px;
+ position: relative;
+}
+
+.product-list__item--image {
+ width: 100%;
+ border-bottom: 1px dashed var(--main1);
+ padding: 30px;
+ overflow: hidden;
+}
+
+.product-list__item--image img {
+ width: 100%;
+ height: auto;
+}
+
+.product-list__content {
+ padding: 10px 15px;
+}
+
+.product-list__title {
+ font-size: 18px;
+ font-weight: 700;
+ margin-bottom: 10px;
+ line-height: 1.3;
+ display: -webkit-box;
+ -webkit-line-clamp: 2;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+
+.product-list__des {
+ font-size: 14px;
+ font-weight: 700;
+ margin-bottom: 10px;
+ line-height: 1.3;
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis;
+}
+
+.product-list__priceOld {
+ font-size: 12px;
+ color: rgb(0 0 0 / 50%);
+ margin-bottom: 5px;
+ text-decoration: line-through;
+}
+
+.product-list__price {
+ font-size: 16px;
+ color: var(--main1);
+ font-weight: 700;
+}
+
+.product-list__discount {
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ width: 40px;
+ height: 40px;
  background-color: red;
- height: 300px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 14px;
+ font-weight: 500;
+ color: #fff;
+ pointer-events: none;
+}
+
+.product-list__btn {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ opacity: 0;
+ pointer-events: none;
+ transition: all ease-in-out .5s;
+ background-color: rgb(0 0 0 / 80%);
+ border-radius: 5px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.product-list__btn a,
+.product-list__btn i {
+ font-size: 24px;
+ color: #fff;
+ cursor: pointer;
+}
+
+.product-list__btn a {
+ margin-right: 10px;
+}
+
+.product-list__item:hover .product-list__btn {
+ pointer-events: inherit;
+ opacity: 1;
+}
+
+#product-detail .product-des__detail p {
+ margin-bottom: 28px;
+}
+
+#product-detail .product-des__detail a {
+ text-decoration: none;
+ pointer-events: none;
+ box-shadow: none !important;
+}
+
+#product-detail .product-info__image {
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#product-detail .product-info__image img {
+ width: 400px;
+ height: auto;
+}
+
+#product-detail .product-info__category {
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+}
+
+#product-detail .product-info__category li a {
+ text-decoration: none;
+ font-size: 14px;
+ color: var(--main1);
+}
+
+#product-detail .product-info__category li:not(:last-child) {
+ margin-right: 15px;
+}
+
+
+#product-detail .product-info__priceOld {
+ font-size: 16px;
+ color: rgb(0 0 0 / 50%);
+ margin-bottom: 15px;
+ text-decoration: line-through;
+}
+
+#product-detail .product-info__price {
+ font-size: 18px;
+ color: var(--main1);
+ font-weight: 700;
 }
