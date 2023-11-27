@@ -2,7 +2,7 @@
 const checkUser = () => {
   const user = JSON.parse(localStorage.getItem('userID'));
   const getBlackList = JSON.parse(localStorage.getItem('black-list'));
-  if(getBlackList || getBlackList.length < 0) {
+  if(getBlackList || getBlackList?.length < 0) {
      if (user) {
       for (let i = 0; i < getBlackList.length; i++) {
         if (user?.id === getBlackList[i].id) {
@@ -55,12 +55,32 @@ const renderHeaderTop = (user) => {
  `
 }
 const logoutUser = () => {
+  const user = JSON.parse(localStorage.getItem('userID'));
+  const userList = JSON.parse(localStorage.getItem('userList'));
   const elementLogout = document.querySelector('#logout-user');
   if (!elementLogout) return;
   elementLogout.addEventListener('click', function () {
+    if(user.cart.length > 0) {
+      for(let i = 0; i < userList.length; i++) {
+        if(user.id === userList[i].id) {
+          userList[i].cart = user.cart;
+          localStorage.setItem('userList', JSON.stringify(userList))
+           localStorage.removeItem('userID');
+    return window.location.href = './'
+        }
+      }
+    }
     localStorage.removeItem('userID');
     return window.location.href = './'
   })
+}
+
+
+
+
+const productAddToCart = (id) => {
+  // const userID = JSON.parse(localStorage.getItem('userID'));
+  console.log(id)
 }
 renderHeaderTop(checkUser());
 logoutUser();

@@ -51,9 +51,12 @@ const handleSubmitForm = (event) => {
         }
       }
       if(getUserList[i].email === userEmail && getUserList[i].password === token[0]) {
+        const checkCart = getUserList[i].cart ? getUserList[i].cart : []
         const checkLogin = {
           id: getUserList[i].id,
           token: token[1],
+          cart: checkCart,
+          payment: []
         }
         getUserList[i].status = true;
         localStorage.setItem('userList', JSON.stringify(getUserList));

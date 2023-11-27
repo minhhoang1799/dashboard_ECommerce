@@ -166,7 +166,7 @@ const addProduct = () => {
         price: getProductPrice,
         priceDiscount: getProductPriceDiscount,
         size: [...getSize],
-        quantity: getProductQuatity,
+        quantity: Number(getProductQuatity),
         detail: "",
         CreatedAt: `${new Date().getDate()}:${new Date().getMonth()}:${new Date().getFullYear()}`
       }
